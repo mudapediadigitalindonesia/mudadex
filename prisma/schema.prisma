@@ -1,0 +1,60 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id            String   @id @map("_id")
+  createdAt     DateTime @default(now())
+  fullname      String
+  email         String   @unique
+  password      String   @default("")
+  // phone         String   @unique
+  emailVerified Boolean  @default(false)
+  // phoneVerified Boolean  @default(false)
+  walletAddress String[] @default([])
+  image         String   @default("https://img.freepik.com/free-psd/3d-render-avatar-character_23-2150611765.jpg")
+}
+
+model Otp {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  code String
+}
+
+model TokenListed {
+  id         String @id @map("_id")
+  title      String
+  pitch      String
+  tokenImage String
+  website    String
+  telegram   String
+  x          String
+  discord    String
+}
+
+model Wallet {
+  id      String @id @map("_id")
+  address String
+}
+
+model BotAccess {
+  id       String @id @default(auto()) @map("_id") @db.ObjectId
+  username String @unique
+  password String
+}
+
+model Watchlist {
+  id                   String @id @default(auto()) @map("_id") @db.ObjectId
+  address              String @unique
+  tokenContractAddress String[] @unique
+}

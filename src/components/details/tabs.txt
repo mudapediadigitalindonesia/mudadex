@@ -1,0 +1,90 @@
+{/* <Tabs defaultValue="buy" className="lg:block hidden">
+        <TabsList className="w-full">
+          <TabsTrigger value="buy" className="w-full data-[state=active]:bg-foreground data-[state=active]:text-[#09090B]">
+            Buy
+          </TabsTrigger>
+          <TabsTrigger value="sell" className="w-full data-[state=active]:bg-red-500 data-[state=active]:text-white">
+            Sell
+          </TabsTrigger>
+        </TabsList>
+        <TabsContent value="buy">
+          <div className="space-y-3">
+            <h1 className="text-sm font-semibold">Total (SOL)</h1>
+            <Input type="number" placeholder="Enter amount of SOL" />
+            <div className="flex items-center w-full justify-between gap-3">
+              <Button variant={'outline'} size={'sm'} className="w-full">0.1</Button>
+              <Button variant={'outline'} size={'sm'} className="w-full">0.5</Button>
+              <Button variant={'outline'} size={'sm'} className="w-full">1</Button>
+              <Button variant={'outline'} size={'sm'} className="w-full">MAX</Button>
+            </div>
+            {connected ? <Button className="w-full">Trade</Button> : <Button className="w-full" disabled>Connect Wallet</Button>}
+          </div>
+        </TabsContent>
+        <TabsContent value="sell">
+          <div className="space-y-3">
+            <h1 className="text-sm font-semibold">Amount ({tokenInfo[0].info.tokenSymbol})</h1>
+            <Input type="number" placeholder={`Enter amount of ${tokenInfo[0].info.tokenSymbol}`} />
+            <div className="flex items-center w-full justify-between gap-3">
+              <Button variant={'outline'} size={'sm'} className="w-full">25%</Button>
+              <Button variant={'outline'} size={'sm'} className="w-full">50%</Button>
+              <Button variant={'outline'} size={'sm'} className="w-full">75%</Button>
+              <Button variant={'outline'} size={'sm'} className="w-full">MAX</Button>
+            </div>
+            <h1 className="text-sm font-semibold">Total (SOL)</h1>
+            <Input type="number" placeholder="Total SOL Recieved" />
+            {connected ? <Button className="w-full">Trade</Button> : <Button className="w-full" disabled>Connect Wallet</Button>}
+          </div>
+        </TabsContent>
+      </Tabs>
+
+      <div className='lg:hidden fixed bottom-3 left-0 right-0 px-3'>
+        <Drawer>
+          <DrawerTrigger className='w-full py-2 text-sm bg-foreground text-background font-semibold rounded-full'>Trade</DrawerTrigger>
+          <DrawerContent className='p-3'>
+            <DrawerHeader>
+              <DrawerTitle>Trade {tokenInfo[0].info.tokenSymbol}</DrawerTitle>
+              <DrawerDescription>This action cannot be undone</DrawerDescription>
+            </DrawerHeader>
+            <DrawerDescription>
+              <Tabs defaultValue="buy" className="l">
+                <TabsList className="w-full">
+                  <TabsTrigger value="buy" className="w-full data-[state=active]:bg-foreground data-[state=active]:text-[#09090B]">
+                    Buy
+                  </TabsTrigger>
+                  <TabsTrigger value="sell" className="w-full data-[state=active]:bg-red-500 data-[state=active]:text-white">
+                    Sell
+                  </TabsTrigger>
+                </TabsList>
+                <TabsContent value="buy">
+                  <div className="space-y-3">
+                    <h1 className="text-sm font-semibold">Total (SOL)</h1>
+                    <Input type="number" placeholder="Enter amount of SOL" />
+                    <div className="flex items-center w-full justify-between gap-3">
+                      <Button variant={'outline'} size={'sm'} className="w-full">0.1</Button>
+                      <Button variant={'outline'} size={'sm'} className="w-full">0.5</Button>
+                      <Button variant={'outline'} size={'sm'} className="w-full">1</Button>
+                      <Button variant={'outline'} size={'sm'} className="w-full">MAX</Button>
+                    </div>
+                    {connected ? <Button className="w-full">Trade</Button> : <Button className="w-full" disabled>Connect Wallet</Button>}
+                  </div>
+                </TabsContent>
+                <TabsContent value="sell">
+                  <div className="space-y-3">
+                    <h1 className="text-sm font-semibold">Amount ({tokenInfo[0].info.tokenSymbol})</h1>
+                    <Input type="number" placeholder={`Enter amount of ${tokenInfo[0].info.tokenSymbol}`} />
+                    <div className="flex items-center w-full justify-between gap-3">
+                      <Button variant={'outline'} size={'sm'} className="w-full">25%</Button>
+                      <Button variant={'outline'} size={'sm'} className="w-full">50%</Button>
+                      <Button variant={'outline'} size={'sm'} className="w-full">75%</Button>
+                      <Button variant={'outline'} size={'sm'} className="w-full">MAX</Button>
+                    </div>
+                    <h1 className="text-sm font-semibold">Total (SOL)</h1>
+                    <Input type="number" placeholder="Total SOL Recieved" />
+                    {connected ? <Button className="w-full">Trade</Button> : <Button className="w-full" disabled>Connect Wallet</Button>}
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </DrawerDescription>
+          </DrawerContent>
+        </Drawer>
+      </div> */}
