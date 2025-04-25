@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-const Example = () => {
+const FloatingPhoneComp = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -82,4 +82,4 @@ const Screen = () => {
   );
 };
 
-export default Example;
+export default FloatingPhoneComp;
