@@ -3,6 +3,7 @@ import ScrollLinked from "@/components/ScrollLinked";
 import FadeIn from "@/components/FadeIn";
 import Image from "next/image";
 import { h2 } from "framer-motion/client";
+import SwipeCards from "@/components/SwipeCard";
 
 export default function Home() {
   return (
@@ -26,6 +27,9 @@ export default function Home() {
         <div className="min-h-screen flex items-start justify-start ml-[106px] mt-[131px]">
           <FadeIn />
         </div>
+      </div>
+      <div className="flex min-h-screen items-center justify-center bg-white">
+        <SwipeCards />
       </div>
     </>
   );
