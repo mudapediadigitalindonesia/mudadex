@@ -7,7 +7,7 @@ export default function FadeIn() {
       initial={{ opacity: 0, y: 0 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, ease: "easeOut" }}
-      viewport={{ once: true }}
+      viewport={{ once: false, amount: 0.3 }}
     >
       <div className="mx-auto w-[499px] h-[415px] rounded-md text-justify">
         <div className="font-extrabold text-[50px]">MUDA PEDIA</div>
