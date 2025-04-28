@@ -74,7 +74,7 @@ const SwipeCards = () => {
   const [removedCards, setRemovedCards] = useState<CardType[]>([]);
 
   return (
-    <div className="relative h-[500px] w-full grid place-items-center bg-neutral-100 overflow-hidden">
+    <div className="relative h-[500px] w-full grid place-items-center ">
       {cards.map((card) => (
         <Card
           key={card.id}

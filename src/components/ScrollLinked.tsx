@@ -69,7 +69,7 @@ export default function ScrollLinked() {
   };
 
   return (
-    <div className="bg-gray-100 p-4 rounded-xl relative flex items-center justify-center">
+    <div className="p-4 rounded-xl relative flex items-center justify-center">
       {/* Panah kiri */}
       <button
         onClick={handlePrev}

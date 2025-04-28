@@ -4,6 +4,7 @@ import FadeIn from "@/components/FadeIn";
 import Image from "next/image";
 import { h2 } from "framer-motion/client";
 import SwipeCards from "@/components/SwipeCard";
+import InfinitySlider from "@/components/InfinitySlider";
 
 export default function Home() {
   return (
@@ -24,12 +25,25 @@ export default function Home() {
         <h2 className="text-[40px] font-semibold text-sky-950">
           MudaDex Exclusive Tokens
         </h2>
-        <div className="min-h-screen flex items-start justify-start ml-[106px] mt-[131px]">
+        {/* FadeIn */}
+        <div className="flex items-start ml-[106px] mt-[131px]">
           <FadeIn />
+          {/* SwipeCard */}
+          <div className="flex items-center justify-center bg-white p-4 w-[700px] h-[200px] ml-auto">
+            <SwipeCards />
+          </div>
         </div>
       </div>
-      <div className="flex min-h-screen items-center justify-center bg-white">
-        <SwipeCards />
+      {/* InfinitySlider */}
+      <div className="p-2 text-center">
+        <h3 className="text-[40px] font-bold text-sky-950">
+          Token Trending on SOLANA
+        </h3>
+        <div>
+          <div className="mt-[93px]">
+            <InfinitySlider />
+          </div>
+        </div>
       </div>
     </>
   );
