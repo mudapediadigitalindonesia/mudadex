@@ -39,7 +39,7 @@ const cardData: CardType[] = [
   },
   {
     id: 3,
-    logo: "/images/usdt.jpg",
+    logo: "/images/gambar4.jpg",
     name: "Featured Token",
     price: "$3.691",
     marketCap: "$3.69K",

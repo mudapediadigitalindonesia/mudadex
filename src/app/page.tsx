@@ -1,10 +1,11 @@
 import FloatingPhoneComp from "@/components/FloatingPhone";
 import ScrollLinked from "@/components/ScrollLinked";
 import FadeIn from "@/components/FadeIn";
-import Image from "next/image";
-import { h2 } from "framer-motion/client";
 import SwipeCards from "@/components/SwipeCard";
 import InfinitySlider from "@/components/InfinitySlider";
+import Features from "@/components/Features";
+import Wallets from "@/components/Wallets";
+import { h2 } from "framer-motion/client";
 
 export default function Home() {
   return (
@@ -44,6 +45,18 @@ export default function Home() {
             <InfinitySlider />
           </div>
         </div>
+      </div>
+      {/* Features */}
+      <div className="p-2 text-center mt-[131px]">
+        <h4 className="text-[36px] font-bold text-sky-950">
+          MUDADEX AMAZING FEATURES
+        </h4>
+        <div className="mt-[79px]">
+          <Features />
+        </div>
+      </div>
+      <div>
+        <Wallets />
       </div>
     </>
   );
