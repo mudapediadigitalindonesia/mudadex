@@ -5,7 +5,7 @@ import SwipeCards from "@/components/SwipeCard";
 import InfinitySlider from "@/components/InfinitySlider";
 import Features from "@/components/Features";
 import Wallets from "@/components/Wallets";
-
+import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <>
@@ -56,6 +56,9 @@ export default function Home() {
       </div>
       <div>
         <Wallets />
+      </div>
+      <div>
+        <FAQ />
       </div>
     </>
   );
