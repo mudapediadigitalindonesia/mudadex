@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 
 type CardType = {
@@ -158,7 +157,8 @@ const Card = ({
         <span className="text-purple-500">✨</span>
       </div>
       <div className="flex gap-4 items-center">
-        <img src={logo} alt="logo" className="w-20 h-20 rounded-full" />
+        {/* <img src={logo} alt="logo" className="w-20 h-20 rounded-full" /> */}
+        <Image src={logo} alt="logo" className="w-20 h-20 rounded-full" />
         <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
           <div>
             <p className="text-gray-500">Price</p>

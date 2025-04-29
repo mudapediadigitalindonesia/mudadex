@@ -5,7 +5,6 @@ import SwipeCards from "@/components/SwipeCard";
 import InfinitySlider from "@/components/InfinitySlider";
 import Features from "@/components/Features";
 import Wallets from "@/components/Wallets";
-import { h2 } from "framer-motion/client";
 
 export default function Home() {
   return (

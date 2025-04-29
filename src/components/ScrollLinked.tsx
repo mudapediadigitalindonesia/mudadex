@@ -4,8 +4,6 @@ import { motion, useMotionValue, animate } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Link from "next/link";
-import { link } from "fs";
 
 // Dummy data crypto
 const cryptoData = [
@@ -76,7 +74,14 @@ export default function ScrollLinked() {
     animate(x, -newIndex * CARD_FULL_WIDTH, { duration: 0.4 });
   };
 
-  const handleDragEnd = (_: any, info: { offset: { x: number } }) => {
+  // const handleDragEnd = (_: any, info: { offset: { x: number } }) => {
+  //   const direction = info.offset.x < -50 ? 1 : info.offset.x > 50 ? -1 : 0;
+  //   const newIndex = clampIndex(index + direction);
+  //   setIndex(newIndex);
+  //   animate(x, -newIndex * CARD_FULL_WIDTH, { duration: 0.4 });
+  // };
+
+  const handleDragEnd = (_: unknown, info: { offset: { x: number } }) => {
     const direction = info.offset.x < -50 ? 1 : info.offset.x > 50 ? -1 : 0;
     const newIndex = clampIndex(index + direction);
     setIndex(newIndex);
