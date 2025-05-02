@@ -30,7 +30,7 @@ export default function FAQ() {
 
   return (
     <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6 mt-10">
-      <h2 className="text-xl font-bold text-center text-slate-900 mb-6">
+      <h2 className="text-[40px] font-bold text-center text-sky-950 mb-6">
         Questions? We’ve got answer
       </h2>
 

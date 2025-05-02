@@ -56,14 +56,14 @@ export default function Home() {
           <Features />
         </div>
       </div>
-
+      {/* Wallets */}
       <div>
         <Wallets />
       </div>
+      {/* FAQ */}
       <div>
         <FAQ />
       </div>
-
       {/* Footer */}
       <Footer />
     </>
