@@ -7,10 +7,12 @@ import Features from "@/components/Features";
 import Wallets from "@/components/Wallets";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import Background from "@/components/backgorund";
 
 export default function Home() {
   return (
     <>
+      <Background />
       {/* hero */}
       <div className="flex justify-end right-10">
         <div className="flex h-[1003px] w-[586px] bg-blue-800">
@@ -20,7 +22,10 @@ export default function Home() {
 
       {/* CryptoCard */}
       <div className="p-2 text-center mt-[74px] ml-[40px]">
-        <h1 className="text-[35px] font-bold"> Top 5 Crypto Assets</h1>
+        <h1 className="text-[35px] font-bold text-sky-950">
+          {" "}
+          Top 5 Crypto Assets
+        </h1>
         <ScrollLinked />
       </div>
 
