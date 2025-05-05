@@ -31,7 +31,7 @@ export default function Home() {
         </h2>
         <div className="flex items-start ml-[106px] mt-[131px]">
           <FadeIn />
-          <div className="flex items-center justify-center bg-white p-4 w-[700px] h-[200px] ml-auto">
+          <div className="flex items-center justify-center p-4 w-[700px] h-[200px] ml-auto">
             <SwipeCards />
           </div>
         </div>
