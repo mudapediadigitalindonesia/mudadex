@@ -65,6 +65,7 @@ export default function Home() {
         <FAQ />
       </div>
       {/* Footer */}
+      <div className="mt-[93px]"></div>
       <Footer />
     </>
   );
