@@ -11,8 +11,12 @@ import Background from "@/components/backgorund";
 
 export default function Home() {
   return (
+<<<<<<< Updated upstream
     <>
       <Background />
+=======
+    <div className="max-w-7xl mx-auto overflow-hidden">
+>>>>>>> Stashed changes
       {/* hero */}
       <div className="flex justify-end right-10">
         <div className="flex h-[1003px] w-[586px] bg-blue-800">
@@ -70,8 +74,15 @@ export default function Home() {
         <FAQ />
       </div>
       {/* Footer */}
+<<<<<<< Updated upstream
       <div className="mt-[93px]"></div>
       <Footer />
     </>
+=======
+      <div className="mt-[79px]">
+        <Footer />
+      </div>
+    </div>
+>>>>>>> Stashed changes
   );
 }
