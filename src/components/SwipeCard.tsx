@@ -80,7 +80,6 @@ const SwipeCards = () => {
   const second = cardData[(startIndex + 1) % cardData.length];
 
   return (
-<<<<<<< Updated upstream
     <div className="relative h-[500px] w-full flex items-center justify-center overflow-hidden">
       {[second, first].map((card, index) => (
         <SwipeCard
@@ -88,17 +87,6 @@ const SwipeCards = () => {
           card={card}
           isFront={index === 1}
           onSwipe={handleSwipe}
-=======
-    <div className="relative h-[500px] w-full grid place-items-center ">
-      {cards.map((card, i) => (
-        <Card
-          key={i}
-          {...card} // ⬅ ini udah otomatis include `link`
-          cards={cards}
-          setCards={setCards}
-          removedCards={removedCards}
-          setRemovedCards={setRemovedCards}
->>>>>>> Stashed changes
         />
       ))}
     </div>

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -143,13 +142,3 @@ export default function WavePage() {
     />
   );
 }
-=======
-const background = ({ children }) => {
-  return (
-    <>
-      <div>background</div>
-      {children}
-    </>
-  );
-};
->>>>>>> Stashed changes
