@@ -9,19 +9,25 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Background from "@/components/backgorund";
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <>
       <div>
         <Background />
+        {/* Header */}
+        <div>
+          <Header />
+        </div>
         {/* Hero 1 */}
-        <div className="fles items-start"></div>
-        <Header />
-        {/* Hero2 */}
-        <div className="flex justify-end right-10">
-          <div className="flex h-[1003px] w-[586px] bg-blue-800">
-            <FloatingPhoneComp />
+        <div className="flex items-start ml-[106px] mt-[131px]">
+          <Hero />
+          {/* Hero2 */}
+          <div className="flex justify-end right-10">
+            <div className="flex h-[1003px] w-[586px] bg-blue-800">
+              <FloatingPhoneComp />
+            </div>
           </div>
         </div>
         {/* CryptoCard */}

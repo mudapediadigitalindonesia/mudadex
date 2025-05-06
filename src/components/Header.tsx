@@ -1,27 +1,41 @@
-// src/app/components/HeroSection.tsx
-import WaveBackground from "@/components/backgorund";
+"use client";
 
-const HeroSection = () => {
+import React, { useRef, useEffect } from "react";
+import WavePage from "@/components/backgorund";
+
+export default function Home() {
   return (
-    <div className="relative w-full h-screen text-white overflow-hidden">
-      <WaveBackground />
-      <div className="relative z-10 flex flex-col justify-center h-full max-w-5xl px-6 mx-auto">
-        <h2 className="text-lg md:text-xl">Welcome To Mudadex</h2>
-        <h1 className="text-4xl md:text-6xl font-bold mt-2">
-          The Future Of Crypto Trading!
-        </h1>
-        <p className="mt-4 text-lg max-w-2xl">
-          Explore the world of crypto with ease, trade without limits, and
-          embrace financial freedom in the digital era. With a user-friendly
-          interface and a transparent system, Mudadex is the perfect choice for
-          your investment future.
-        </p>
-        <button className="px-5 py-2 bg-indigo-600 text-white rounded-md text-sm font-semibold hover:bg-indigo-700 transition">
-          Try Now!
+    <div className="navbar absolute top-0 w-full flex justify-between items-center px-12 py-4 z-20">
+      <img
+        src="/images/logo_footer.png"
+        alt="Logo"
+        className="logo w-[80px] h-[80px]"
+      />
+      <nav className="flex space-x-6 text-slate-300 font-medium">
+        <a href="#" className="hover:text-white">
+          BuyCrypto
+        </a>
+        <a href="#" className="hover:text-white">
+          Trade
+        </a>
+        <a href="#" className="hover:text-white">
+          Markets
+        </a>
+        <a href="#" className="hover:text-white">
+          Earn
+        </a>
+        <a href="#" className="hover:text-white">
+          About
+        </a>
+      </nav>
+      <div className="auth-buttons flex items-center space-x-4 mr-24">
+        <button className="login px-4 py-2 rounded-md font-semibold text-white bg-transparent hover:bg-white hover:text-[#0a0b2c] border border-white transition">
+          Login
+        </button>
+        <button className="signup px-4 py-2 rounded-md font-semibold text-white bg-[#6c5ce7] hover:bg-indigo-600 transition">
+          Sign Up
         </button>
       </div>
     </div>
   );
-};
-
-export default HeroSection;
+}
