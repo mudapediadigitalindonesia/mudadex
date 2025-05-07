@@ -10,7 +10,7 @@ export default function FadeIn() {
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="mx-auto w-[499px] h-[415px] rounded-md text-justify">
-        <div className="font-extrabold text-[50px] text-sky-950 dark:text-gray-400:">
+        <div className="font-extrabold text-[50px] text-sky-950 dark:text-gray-600:">
           MUDA PEDIA
         </div>
         <div className="font-medium text-[29px] text-sky-950 dark:text-gray-700">

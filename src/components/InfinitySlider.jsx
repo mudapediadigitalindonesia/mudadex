@@ -52,7 +52,7 @@ const Card = ({ src, name, idx, href = "#" }) => (
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-[188px] h-[84px] flex items-center gap-4 rounded-xl p-4 bg-white shadow-xl/20  transition-shadow duration-300 text-left"
+      className="w-[188px] h-[84px] flex items-center gap-4 rounded-xl p-4 bg-white dark:bg-gray-800 shadow-xl/20  transition-shadow duration-300 text-left"
     >
       <Image
         src={src}

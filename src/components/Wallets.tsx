@@ -22,10 +22,10 @@ export default function Wallets() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-y-12 lg:gap-x-34">
         {/* LEFT SIDE */}
         <div className="space-y-6 text-center lg:text-left max-w-md">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold dark:text-neutral-400 text-gray-900 ">
             Register <span>your coins now!</span>
           </h2>
-          <p className="text-gray-700 text-sm sm:text-base text-justify">
+          <p className="dark:text-neutral-400 text-gray-900 text-sm sm:text-base text-justify">
             List your coins and enjoy skyrocketing profit, a strong community
             and proven security. Don’t miss this opportunity!
           </p>

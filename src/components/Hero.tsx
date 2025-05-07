@@ -3,7 +3,7 @@ import WaveBackground from "@/components/backgorund";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen text-sky-950 dark:text-white overflow-hidden">
+    <div className="relative w-full h-screen text-sky-950 dark:text-neutral-400 overflow-hidden">
       <WaveBackground />
       <div className="relative z-10 flex flex-col justify-center h-full max-w-5xl px-6 mx-auto">
         <h2 className="text-lg md:text-xl">Welcome To Mudadex</h2>

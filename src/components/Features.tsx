@@ -36,14 +36,14 @@ export default function Features() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white rounded-xl shadow-xl p-6 text-start space-y-4"
+            className="bg-white dark:bg-gray-800 rounded-xl shadow-xl p-6 text-start space-y-4"
           >
-            <div className="w-12 h-12 ms-0 flex items-center justify-center bg-indigo-600 text-white rounded-full text-xl">
+            <div className="w-12 h-12 ms-0 flex items-center justify-center bg-indigo-600 text-neutral-400 rounded-full text-xl">
               {feature.icon}
             </div>
 
             <h3 className="font-semibold text-sm">{feature.title}</h3>
-            <p className="text-xs text-gray-600 text-justify">
+            <p className="text-xs dark:text-neutral-400 text-gray-900 text-justify">
               {feature.description}
             </p>
           </div>
