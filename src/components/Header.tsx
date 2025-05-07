@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 import WavePage from "@/components/backgorund";
+import { Moon } from "lucide-react";
 
 export default function Home() {
   return (
@@ -29,6 +30,12 @@ export default function Home() {
         </a>
       </nav>
       <div className="auth-buttons flex items-center space-x-4 mr-24">
+        <button
+          className="theme-toggle p-2 rounded-md text-white hover:bg-white hover:text-[#0a0b2c] transition"
+          aria-label="Toggle Dark Mode"
+        >
+          <Moon className="w-6 h-6" />
+        </button>
         <button className="login px-4 py-2 rounded-md font-semibold text-white bg-transparent hover:bg-white hover:text-[#0a0b2c] border border-white transition">
           Login
         </button>
