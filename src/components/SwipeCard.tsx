@@ -116,7 +116,7 @@ const SwipeCard = ({
 
   return (
     <motion.div
-      className="absolute w-[320px] bg-white rounded-xl p-4 shadow-xl cursor-grab active:cursor-grabbing"
+      className="absolute w-[320px] bg-white dark:bg-gray-800 rounded-xl p-4 shadow-xl cursor-grab active:cursor-grabbing"
       style={{
         x,
         rotate: isFront ? rotate : 0,
@@ -128,26 +128,28 @@ const SwipeCard = ({
       onDragEnd={handleDragEnd}
     >
       <div className="flex justify-between items-start mb-4">
-        <h2 className="font-semibold text-sm text-gray-600">{card.name}</h2>
+        <h2 className="font-semibold text-sm text-gray-600 dark:text-neutral-400">
+          {card.name}
+        </h2>
         <span className="text-purple-500">✨</span>
       </div>
       <div className="flex gap-4 items-center">
         <img src={card.logo} alt="logo" className="w-20 h-20 rounded-full" />
-        <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
+        <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-neutral-400">
           <div>
-            <p className="text-gray-500">Price</p>
+            <p className="text-sky-950 dark:text-neutral-400">Price</p>
             <p>{card.price}</p>
           </div>
           <div>
-            <p className="text-gray-500">Market Cap</p>
+            <p className="text-sky-950 dark:text-neutral-400">Market Cap</p>
             <p>{card.marketCap}</p>
           </div>
           <div>
-            <p className="text-gray-500">Volume</p>
+            <p className="text-sky-950 dark:text-neutral-400">Volume</p>
             <p>{card.volume}</p>
           </div>
           <div>
-            <p className="text-gray-500">Address</p>
+            <p className="text-sky-950 dark:text-neutral-400">Address</p>
             <p className="truncate">{card.address}</p>
           </div>
         </div>
@@ -156,7 +158,7 @@ const SwipeCard = ({
         href={card.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 block w-full rounded-md border border-black py-2 text-center text-sm font-medium hover:bg-black hover:text-white transition"
+        className="mt-6 block w-full rounded-md border py-2 text-center text-sm font-medium dark:hover:bg-neutral-400 hover:bg-sky-950 hover:text-white transition text-sky-950 dark:text-neutral-400"
         onPointerDown={(e) => e.stopPropagation()}
       >
         View Details ↗

@@ -2,7 +2,8 @@
 
 import React, { useRef, useEffect } from "react";
 import WavePage from "@/components/backgorund";
-import { Moon } from "lucide-react";
+import { Button } from "./ui/button";
+import { ThemeToggle } from "@/app/theme-toggle";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         alt="Logo"
         className="logo w-[80px] h-[80px]"
       />
-      <nav className="flex space-x-6 text-slate-300 font-medium">
+      <nav className="flex space-x-6 text-sky-950 dark:text-neutral-400 font-medium">
         <a href="#" className="hover:text-white">
           BuyCrypto
         </a>
@@ -30,16 +31,11 @@ export default function Home() {
         </a>
       </nav>
       <div className="auth-buttons flex items-center space-x-4 mr-24">
-        <button
-          className="theme-toggle p-2 rounded-md text-white hover:bg-white hover:text-[#0a0b2c] transition"
-          aria-label="Toggle Dark Mode"
-        >
-          <Moon className="w-6 h-6" />
-        </button>
-        <button className="login px-4 py-2 rounded-md font-semibold text-white bg-transparent hover:bg-white hover:text-[#0a0b2c] border border-white transition">
+        <ThemeToggle />
+        <button className="login px-4 py-2 rounded-md font-semibold text-white dark:text-black bg-transparent dark:bg-[#6c5ce7] hover:bg-white hover:text-[#0a0b2c] border border-white transition dark:border-black">
           Login
         </button>
-        <button className="signup px-4 py-2 rounded-md font-semibold text-white bg-[#6c5ce7] hover:bg-indigo-600 transition">
+        <button className="signup px-4 py-2 rounded-md font-semibold text-white bg-[#6c5ce7] dark:bg-transparent hover:bg-indigo-600 transition dark:border dark:border-white ">
           Sign Up
         </button>
       </div>

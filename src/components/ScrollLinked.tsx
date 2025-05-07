@@ -112,7 +112,7 @@ export default function ScrollLinked() {
             <a
               key={i}
               href={crypto.link}
-              className="bg-white border border-gray-700 rounded-[15px] shadow w-[160px] h-[140px] flex-shrink-0 flex flex-col justify-center items-center px-4 py-3 mr-[20px] gap-y-2 text-center transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-blue-500 hover:bg-blue-50 no-underline"
+              className="bg-white dark:bg-gray-800 border border-gray-700 rounded-[15px] shadow w-[160px] h-[140px] flex-shrink-0 flex flex-col justify-center items-center px-4 py-3 mr-[20px] gap-y-2 text-center transition-all duration-200 hover:scale-105 hover:shadow-xl hover:border-blue-500 hover:bg-blue-50 no-underline"
             >
               <div className="flex items-center gap-2 mb-2">
                 <Image
@@ -123,7 +123,7 @@ export default function ScrollLinked() {
                 />
                 <span className="font-bold">{crypto.name}</span>
               </div>
-              <div className="text-sm text-gray-800 font-medium">
+              <div className="text-sm text-neutral-400 dark:text-gray-800 font-medium">
                 Rp {crypto.price.toLocaleString("id-ID")}
               </div>
               <div className="text-red-600 text-sm font-semibold flex items-center gap-1">

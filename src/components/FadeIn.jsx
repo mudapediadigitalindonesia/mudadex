@@ -10,9 +10,13 @@ export default function FadeIn() {
       viewport={{ once: false, amount: 0.3 }}
     >
       <div className="mx-auto w-[499px] h-[415px] rounded-md text-justify">
-        <div className="font-extrabold text-[50px]">MUDA PEDIA</div>
-        <div className="font-medium text-[29px] text-gray-700">(MUDA)</div>
-        <div className="text-[15px] text-gray-400">
+        <div className="font-extrabold text-[50px] text-sky-950 dark:text-gray-400:">
+          MUDA PEDIA
+        </div>
+        <div className="font-medium text-[29px] text-sky-950 dark:text-gray-700">
+          (MUDA)
+        </div>
+        <div className="text-[15px] text-sky-950 dark:text-gray-400">
           We, at MudaPedia, understand that the world of Web3, blockchain, and
           crypto is evolving rapidly, bringing new opportunities and challenges.
           As a startup at the heart of this revolution, we merge technology and

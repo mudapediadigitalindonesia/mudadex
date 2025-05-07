@@ -3,7 +3,7 @@ import WaveBackground from "@/components/backgorund";
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full h-screen text-white overflow-hidden">
+    <div className="relative w-full h-screen text-sky-950 dark:text-white overflow-hidden">
       <WaveBackground />
       <div className="relative z-10 flex flex-col justify-center h-full max-w-5xl px-6 mx-auto">
         <h2 className="text-lg md:text-xl">Welcome To Mudadex</h2>
@@ -16,7 +16,7 @@ const HeroSection = () => {
           interface and a transparent system, Mudadex is the perfect choice for
           your investment future.
         </p>
-        <button className="mt-6 px-6 py-2 bg-indigo-500 hover:bg-indigo-600 text-white rounded-xl w-fit">
+        <button className="mt-6 px-6 py-2 bg-indigo-700 hover:bg-indigo-600 text-white rounded-xl w-fit">
           Try now
         </button>
       </div>

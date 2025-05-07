@@ -32,7 +32,7 @@ export default function Home() {
         </div>
         {/* CryptoCard */}
         <div className="p-2 text-center mt-[74px] ml-[40px]">
-          <h1 className="text-[35px] font-bold text-sky-950">
+          <h1 className="text-[35px] font-bold text-sky-950 dark:text-neutral-400">
             {" "}
             Top 5 Crypto Assets
           </h1>
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
         {/* Exclusive Tokens */}
         <div className="p-2 text-center mt-[118px]">
-          <h2 className="text-[40px] font-semibold text-sky-950">
+          <h2 className="text-[40px] font-semibold text-sky-950 dark:text-neutral-400">
             MudaDex Exclusive Tokens
           </h2>
           {/* FadeIn */}
@@ -54,7 +54,7 @@ export default function Home() {
         </div>
         {/* InfinitySlider */}
         <div className="p-2 text-center">
-          <h3 className="text-[40px] font-bold text-sky-950">
+          <h3 className="text-[40px] font-bold text-sky-950 dark:text-neutral-400">
             Token Trending on SOLANA
           </h3>
           <div className="mt-[93px]">
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
         {/* Features */}
         <div className="p-2 text-center mt-[131px]">
-          <h4 className="text-[36px] font-bold text-sky-950">
+          <h4 className="text-[36px] font-bold text-sky-950 dark:text-neutral-400">
             MUDADEX AMAZING FEATURES
           </h4>
           <div className="mt-[79px]">
