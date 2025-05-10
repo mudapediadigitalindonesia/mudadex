@@ -1,103 +1,88 @@
-import Image from "next/image";
+import FloatingPhoneComp from "@/components/FloatingPhone";
+import ScrollLinked from "@/components/ScrollLinked";
+import FadeIn from "@/components/FadeIn";
+import SwipeCards from "@/components/SwipeCard";
+import InfinitySlider from "@/components/InfinitySlider";
+import Features from "@/components/Features";
+import Wallets from "@/components/Wallets";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
+import Background from "@/components/backgorund";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <div>
+        <Background />
+        {/* Header */}
+        <div>
+          <Header />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Hero 1 */}
+        <div className="flex items-start ml-[106px] mt-[131px]">
+          <Hero />
+          {/* Hero2 */}
+          <div className="flex justify-end right-10">
+            <div className="flex h-[1003px] w-[586px] bg-blue-800">
+              <FloatingPhoneComp />
+            </div>
+          </div>
+        </div>
+        {/* CryptoCard */}
+        <div className="p-2 text-center mt-[74px] ml-[40px]">
+          <h1 className="text-[35px] font-bold text-sky-950 dark:text-neutral-400">
+            {" "}
+            Top 5 Crypto Assets
+          </h1>
+          <ScrollLinked />
+        </div>
+        {/* Exclusive Tokens */}
+        <div className="p-2 text-center mt-[118px]">
+          <h2 className="text-[40px] font-semibold text-sky-950 dark:text-neutral-400">
+            MudaDex Exclusive Tokens
+          </h2>
+          {/* FadeIn */}
+          <div className="flex items-start ml-[106px] mt-[131px]">
+            <FadeIn />
+            {/* SwipeCard */}
+            <div className="flex items-center justify-center p-4 w-[700px] h-[200px] ml-auto">
+              <SwipeCards />
+            </div>
+          </div>
+        </div>
+        {/* InfinitySlider */}
+        <div className="p-2 text-center">
+          <h3 className="text-[40px] font-bold text-sky-950 dark:text-neutral-400">
+            Token Trending on SOLANA
+          </h3>
+          <div className="mt-[93px]">
+            <InfinitySlider />
+          </div>
+        </div>
+        {/* Features */}
+        <div className="p-2 text-center mt-[131px]">
+          <h4 className="text-[36px] font-bold text-sky-950 dark:text-neutral-400">
+            MUDADEX AMAZING FEATURES
+          </h4>
+          <div className="mt-[79px]">
+            <Features />
+          </div>
+        </div>
+        {/* Wallets */}
+        <div>
+          <Wallets />
+        </div>
+        {/* FAQ */}
+        <div>
+          <FAQ />
+        </div>
+        {/* Footer */}
+        <div className="mt-[79px]">
+          <Footer />
+        </div>
+      </div>
+    </>
   );
 }
