@@ -30,14 +30,14 @@ export default function FAQ() {
 
   return (
     <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 mt-10">
-      <h2 className="text-[40px] font-bold text-center text-sky-950 mb-6 dark:text-neutral-400">
+      <h2 className="text-[40px] font-bold text-center dark:text-blue-50 text-blue-950">
         Questions? We’ve got answer
       </h2>
 
       {faqs.map((faq, index) => (
         <div key={index} className="border-t border-gray-200">
           <button
-            className="w-full text-left py-4 flex justify-between items-center font-semibold text-gray-800 dark:text-neutral-400"
+            className="w-full text-left py-4 flex justify-between items-center font-semibold dark:text-blue-50 text-blue-950"
             onClick={() => toggle(index)}
           >
             {faq.question}

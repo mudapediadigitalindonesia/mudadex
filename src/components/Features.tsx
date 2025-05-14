@@ -43,7 +43,7 @@ export default function Features() {
             </div>
 
             <h3 className="font-semibold text-sm">{feature.title}</h3>
-            <p className="text-xs dark:text-neutral-400 text-gray-900 text-justify">
+            <p className="text-xs dark:text-blue-50 text-blue-950 text-justify">
               {feature.description}
             </p>
           </div>

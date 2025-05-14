@@ -3,7 +3,7 @@ import { FaTelegram, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="my-6">
-      <div className="px-6 max-w-screen-xl mx-auto text-slate-600 dark:text-neutral-400 flex flex-col md:flex-row justify-between md:gap-8 gap-5">
+      <div className="px-6 max-w-screen-xl mx-auto text-blue-50 dark:text-blue-950 flex flex-col md:flex-row justify-between md:gap-8 gap-5">
         <section className="flex flex-col justify-start md:items-start md:w-2/6">
           <p className="md:pt-10">
             Banyuwangi Perum Gedong Blok. D No. 5 Kertosari, Kec. Banyuwangi,
@@ -12,7 +12,7 @@ export default function Footer() {
         </section>
         <section className="flex gap-2 justify-between items-start flex-wrap md:w-3/6">
           <div>
-            <h6 className="text-slate-700 dark:text-neutral-400 text-2xl text-nowrap font-bold">
+            <h6 className="text-blue-50 dark:text-blue-950 text-2xl text-nowrap font-bold">
               About MudaDex
             </h6>
             <ul className="flex flex-col gap-2 mt-2">
@@ -31,7 +31,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h6 className="text-slate-700 dark:text-neutral-400 text-2xl font-bold">
+            <h6 className="text-blue-50 dark:text-blue-950 text-2xl font-bold">
               Entrance
             </h6>
             <ul className="flex flex-col gap-2 mt-2">
@@ -59,7 +59,7 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h6 className="text-slate-700 dark:text-neutral-400 text-2xl font-bold">
+            <h6 className="text-blue-50 dark:text-blue-950 text-2xl font-bold">
               Support
             </h6>
             <ul className="flex flex-col gap-2 mt-2">
@@ -91,25 +91,25 @@ export default function Footer() {
           <div className="flex gap-3 mt-4">
             <a
               href="#"
-              className="p-2 rounded-full bg-sky-950 text-white hover:bg-sky-900"
+              className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
             >
               <FaTelegram className="text-xl" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-sky-950 text-white hover:bg-sky-900"
+              className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
             >
               <FaTwitter className="text-xl" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-sky-950 text-white hover:bg-sky-900"
+              className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
             >
               <FaInstagram className="text-xl" />
             </a>
             <a
               href="#"
-              className="p-2 rounded-full bg-sky-950 text-white hover:bg-sky-900"
+              className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
             >
               <FaYoutube className="text-xl" />
             </a>
@@ -130,7 +130,7 @@ export default function Footer() {
           alt="Logo"
           className="logo w-[80px] h-[80px]"
         />
-        <p className="text-white dark:text-neutral-400">
+        <p className="text-blue-50 dark:text-blue-950">
           Copyright &copy; MudaDex 2025
         </p>
       </div>

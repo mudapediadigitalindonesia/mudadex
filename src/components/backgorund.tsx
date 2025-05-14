@@ -3,14 +3,15 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { useTheme } from "next-themes";
 
 export default function WavePage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     if (!containerRef.current) return;
 
-    // Define renderer, scene, camera, controls, material
     let renderer: THREE.WebGLRenderer;
     let scene: THREE.Scene;
     let camera: THREE.PerspectiveCamera;
@@ -21,27 +22,22 @@ export default function WavePage() {
     const width = window.innerWidth;
     const height = window.innerHeight;
 
-    // Renderer
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(width, height);
     containerRef.current.appendChild(renderer.domElement);
 
-    // Scene
     scene = new THREE.Scene();
 
-    // Camera
     camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 100);
     camera.position.set(0.0, 1.0, 3.0);
     camera.lookAt(0, 0, 0);
 
-    // Plane Geometry
     const aspect = width / height;
     const planeWidth = 12;
     const planeHeight = planeWidth / aspect;
     const geometry = new THREE.PlaneGeometry(planeWidth, planeHeight, 100, 100);
 
-    // Shader Material
     material = new THREE.ShaderMaterial({
       vertexShader: `
         varying vec2 vUv;
@@ -49,6 +45,7 @@ export default function WavePage() {
         varying vec3 vPosition;
         uniform float time;
         uniform float speed;
+
         void main() {
           vUv = uv;
           vPosition = position;
@@ -57,6 +54,7 @@ export default function WavePage() {
           float frequency = 3.0 + sin(pos.x * 0.5 + pos.y * 0.3) * 1.0;
           float wave = sin(pos.x * frequency + time * speed) * amplitude + cos(pos.y * frequency + time * speed * 0.8) * amplitude;
           pos.z += wave;
+
           vec3 tangent = vec3(1.0, 0.0, cos(pos.x * frequency + time) * amplitude);
           vec3 bitangent = vec3(0.0, 1.0, cos(pos.y * frequency + time * 0.8) * amplitude);
           vNormal = normalize(cross(tangent, bitangent));
@@ -69,13 +67,19 @@ export default function WavePage() {
         varying vec3 vPosition;
         uniform float time;
         uniform bool wireframe;
+        uniform bool isDark;
+
         void main() {
-          vec3 baseColor = vec3(0.055, 0.016, 0.290);
+          vec3 baseColor = isDark
+            ? vec3(0.1451, 0.3882, 0.9216)   // blue-800
+            : vec3(0.0902, 0.1451, 0.3294);  // blue-950
+
           vec3 lightPos = vec3(-40.0, -60.0, 20.0);
           vec3 lightDir = normalize(lightPos - vPosition);
           float diff = max(dot(normalize(vNormal), lightDir), 0.0);
           diff = smoothstep(0.1, 1.0, diff);
-          vec3 finalColor = baseColor + diff * vec3(0.8, 0.8, 1.5);
+
+          vec3 finalColor = baseColor + diff * vec3(0.3, 0.4, 0.6);
           gl_FragColor = vec4(finalColor, 1.0);
         }
       `,
@@ -83,6 +87,7 @@ export default function WavePage() {
         time: { value: 0.0 },
         speed: { value: 0.5 },
         wireframe: { value: false },
+        isDark: { value: theme === "dark" }, // ⬅️ set awal
       },
     });
 
@@ -90,7 +95,6 @@ export default function WavePage() {
     plane.rotation.x = -Math.PI / 2;
     scene.add(plane);
 
-    // Controls
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enableRotate = false;
@@ -102,8 +106,8 @@ export default function WavePage() {
     const animate = () => {
       animationId = requestAnimationFrame(animate);
       material.uniforms.time.value = clock.getElapsedTime();
-      controls.update();
       renderer.render(scene, camera);
+      controls.update();
     };
 
     animate();
@@ -119,7 +123,6 @@ export default function WavePage() {
 
     window.addEventListener("resize", handleResize);
 
-    // Cleanup
     return () => {
       window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animationId);
@@ -134,7 +137,8 @@ export default function WavePage() {
         containerRef.current.removeChild(renderer.domElement);
       }
     };
-  }, []);
+  }, [theme]); // ⬅️ listen to theme change
+
   return (
     <div
       ref={containerRef}
