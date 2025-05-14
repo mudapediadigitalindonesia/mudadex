@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { FaTelegram, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export default function Footer() {

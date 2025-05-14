@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useRef, useEffect } from "react";
-import WavePage from "@/components/backgorund";
-import { Button } from "./ui/button";
 import { ThemeToggle } from "@/app/theme-toggle";
 
 export default function Home() {
