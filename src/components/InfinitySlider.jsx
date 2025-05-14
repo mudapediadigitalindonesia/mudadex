@@ -61,7 +61,9 @@ const Card = ({ src, name, idx, href = "#" }) => (
         height={70}
         className="object-cover rounded-md"
       />
-      <h3 className="text-sm font-bold text-black text-[18px]">{name}</h3>
+      <h3 className="text-sm font-bold dark:text-blue-50 text-zinc-950 text-[18px]">
+        {name}
+      </h3>
     </a>
   </div>
 );

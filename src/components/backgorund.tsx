@@ -29,6 +29,10 @@ export default function WavePage() {
 
     scene = new THREE.Scene();
 
+    scene.background = new THREE.Color(
+      theme === "dark" ? "#000000" : "#ffffff"
+    );
+
     camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 100);
     camera.position.set(0.0, 1.0, 3.0);
     camera.lookAt(0, 0, 0);

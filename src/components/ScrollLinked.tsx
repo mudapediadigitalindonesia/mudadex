@@ -123,7 +123,7 @@ export default function ScrollLinked() {
                 />
                 <span className="font-bold">{crypto.name}</span>
               </div>
-              <div className="text-sm dark:text-blue-50 text-blue-950 font-medium">
+              <div className="text-sm dark:text-blue-50 text-zinc-950 font-medium">
                 Rp {crypto.price.toLocaleString("id-ID")}
               </div>
               <div className="text-red-600 text-sm font-semibold flex items-center gap-1">

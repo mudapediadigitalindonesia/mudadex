@@ -14,12 +14,10 @@ import Hero from "@/components/Hero";
 export default function Home() {
   return (
     <>
+      <Header />
       <div>
         <Background />
         {/* Header */}
-        <div>
-          <Header />
-        </div>
         {/* Hero 1 */}
         <div className="flex items-start ml-[106px] mt-[131px]">
           <Hero />
@@ -32,7 +30,7 @@ export default function Home() {
         </div>
         {/* CryptoCard */}
         <div className="p-2 text-center mt-[74px] ml-[40px]">
-          <h1 className="text-[35px] font-bold text-blue-50 dark:text-blue-950">
+          <h1 className="text-[35px] font-bold text-blue-50 dark:text-zinc-950">
             {" "}
             Top 5 Crypto Assets
           </h1>
@@ -40,7 +38,7 @@ export default function Home() {
         </div>
         {/* Exclusive Tokens */}
         <div className="p-2 text-center mt-[118px]">
-          <h2 className="text-[40px] font-semibold text-blue-50 dark:text-blue-950">
+          <h2 className="text-[40px] font-semibold text-blue-50 dark:text-zinc-950">
             MudaDex Exclusive Tokens
           </h2>
           {/* FadeIn */}
@@ -54,7 +52,7 @@ export default function Home() {
         </div>
         {/* InfinitySlider */}
         <div className="p-2 text-center">
-          <h3 className="text-[40px] font-bold text-blue-50 dark:text-blue-950">
+          <h3 className="text-[40px] font-bold text-blue-50 dark:text-zinc-950">
             Token Trending on SOLANA
           </h3>
           <div className="mt-[93px]">
@@ -63,7 +61,7 @@ export default function Home() {
         </div>
         {/* Features */}
         <div className="p-2 text-center mt-[131px]">
-          <h4 className="text-[36px] font-bold text-blue-50 dark:text-blue-950">
+          <h4 className="text-[36px] font-bold text-blue-50 dark:text-zinc-950">
             MUDADEX AMAZING FEATURES
           </h4>
           <div className="mt-[79px]">

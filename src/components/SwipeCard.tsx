@@ -128,28 +128,28 @@ const SwipeCard = ({
       onDragEnd={handleDragEnd}
     >
       <div className="flex justify-between items-start mb-4">
-        <h2 className="font-semibold text-sm dark:text-blue-50 text-blue-950">
+        <h2 className="font-semibold text-sm dark:text-blue-50 text-zinc-950">
           {card.name}
         </h2>
         <span className="text-purple-500">✨</span>
       </div>
       <div className="flex gap-4 items-center">
         <img src={card.logo} alt="logo" className="w-20 h-20 rounded-full" />
-        <div className="grid grid-cols-2 gap-2 text-sm dark:text-blue-50 text-blue-950">
+        <div className="grid grid-cols-2 gap-2 text-sm dark:text-blue-50 text-zinc-950">
           <div>
-            <p className="dark:text-blue-50 text-blue-950">Price</p>
+            <p className="dark:text-blue-50 text-zinc-950">Price</p>
             <p>{card.price}</p>
           </div>
           <div>
-            <p className="dark:text-blue-50 text-blue-950">Market Cap</p>
+            <p className="dark:text-blue-50 text-zinc-950">Market Cap</p>
             <p>{card.marketCap}</p>
           </div>
           <div>
-            <p className="dark:text-blue-50 text-blue-950">Volume</p>
+            <p className="dark:text-blue-50 text-zinc-950">Volume</p>
             <p>{card.volume}</p>
           </div>
           <div>
-            <p className="dark:text-blue-50 text-blue-950">Address</p>
+            <p className="dark:text-blue-50 text-zinc-950">Address</p>
             <p className="truncate">{card.address}</p>
           </div>
         </div>

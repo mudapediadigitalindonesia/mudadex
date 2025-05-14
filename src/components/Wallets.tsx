@@ -22,7 +22,7 @@ export default function Wallets() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-y-12 lg:gap-x-34">
         {/* LEFT SIDE */}
         <div className="space-y-6 text-center lg:text-left max-w-md">
-          <h2 className="text-2xl sm:text-3xl font-bold text-blue-50 dark:text-blue-950 ">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-50 dark:text-zinc-950 ">
             Register <span>your coins now!</span>
           </h2>
           <p className="text-blue-50 dark:text-blue-950 text-sm sm:text-base text-justify">
@@ -48,7 +48,9 @@ export default function Wallets() {
               </div>
               <div>
                 <h4 className="text-sm font-semibold">{step.title}</h4>
-                <p className="text-xs text-gray-600">{step.description}</p>
+                <p className="text-xs text-blue-50 dark:text-zinc-950">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}
