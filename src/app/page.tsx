@@ -36,11 +36,11 @@ export default function Home() {
           <ScrollLinked />
         </div>
         {/* Exclusive Tokens */}
-        <div className="p-2 text-center mt-[118x] ">
+        <div className="p-2 text-center mt-[118x]">
           <h2 className="text-[40px] font-semibold text-blue-50 dark:text-zinc-950">
             MudaDex Exclusive Tokens
           </h2>
-          {/* FadeIn */}
+          {/* FadeIn SwipeCard*/}
 
           <div className="flex items-start ml-[106px] mt-[131px]">
             <SwipeWithFade />

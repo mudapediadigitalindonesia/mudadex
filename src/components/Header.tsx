@@ -11,7 +11,7 @@ export default function Home() {
         alt="Logo"
         className="logo w-[80px] h-[80px]"
       />
-      <nav className="flex space-x-6 dark:text-blue-50 text-zinc-950 font-medium">
+      <nav className="flex space-x-6 text-blue-50 dark:text-zinc-950 font-medium">
         <a href="#" className="hover:text-white">
           BuyCrypto
         </a>
