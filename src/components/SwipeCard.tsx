@@ -18,7 +18,7 @@ const cardData: CardType[] = [
   {
     id: 1,
     logo: "/images/btc.png",
-    name: "Featured Token",
+    name: "Bitcoin",
     price: "$3.691",
     marketCap: "$3.69K",
     volume: "$0",
@@ -28,7 +28,7 @@ const cardData: CardType[] = [
   {
     id: 2,
     logo: "/images/xrp.png",
-    name: "Featured Token",
+    name: "XRP",
     price: "$3.691",
     marketCap: "$3.69K",
     volume: "$0",
@@ -38,7 +38,7 @@ const cardData: CardType[] = [
   {
     id: 3,
     logo: "/images/gambar4.jpg",
-    name: "Featured Token",
+    name: "Gambar4",
     price: "$3.691",
     marketCap: "$3.69K",
     volume: "$0",
@@ -48,7 +48,7 @@ const cardData: CardType[] = [
   {
     id: 4,
     logo: "/images/sol.jpg",
-    name: "Featured Token",
+    name: "Solana",
     price: "$3.691",
     marketCap: "$3.69K",
     volume: "$0",
@@ -58,7 +58,7 @@ const cardData: CardType[] = [
   {
     id: 5,
     logo: "/images/eth.png",
-    name: "Featured Token",
+    name: "Ethereum",
     price: "$3.691",
     marketCap: "$3.69K",
     volume: "$0",
@@ -67,13 +67,19 @@ const cardData: CardType[] = [
   },
 ];
 
-const SwipeCards = () => {
+const SwipeCards = ({
+  setActiveIndex,
+}: {
+  setActiveIndex: (index: number) => void;
+}) => {
   const [startIndex, setStartIndex] = useState(0);
 
   const handleSwipe = (direction: "left" | "right") => {
-    if (direction === "left" || direction === "right") {
-      setStartIndex((prev) => (prev + 1) % cardData.length);
-    }
+    setStartIndex((prev) => {
+      const newIndex = (prev + 1) % cardData.length;
+      setActiveIndex(newIndex);
+      return newIndex;
+    });
   };
 
   const first = cardData[startIndex];
@@ -137,19 +143,19 @@ const SwipeCard = ({
         <img src={card.logo} alt="logo" className="w-20 h-20 rounded-full" />
         <div className="grid grid-cols-2 gap-2 text-sm dark:text-blue-50 text-zinc-950">
           <div>
-            <p className="dark:text-blue-50 text-zinc-950">Price</p>
+            <p>Price</p>
             <p>{card.price}</p>
           </div>
           <div>
-            <p className="dark:text-blue-50 text-zinc-950">Market Cap</p>
+            <p>Market Cap</p>
             <p>{card.marketCap}</p>
           </div>
           <div>
-            <p className="dark:text-blue-50 text-zinc-950">Volume</p>
+            <p>Volume</p>
             <p>{card.volume}</p>
           </div>
           <div>
-            <p className="dark:text-blue-50 text-zinc-950">Address</p>
+            <p>Address</p>
             <p className="truncate">{card.address}</p>
           </div>
         </div>
@@ -158,7 +164,7 @@ const SwipeCard = ({
         href={card.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 block w-full rounded-md border py-2 text-center text-sm font-medium dark:hover:bg-neutral-400 hover:bg-sky-950 hover:text-white transition text-sky-950 dark:text-neutral-400"
+        className="mt-6 block w-full rounded-md border py-2 text-center text-sm font-medium dark:hover:bg-neutral-400 hover:bg-sky-950 hover:text-white transition text-sky-950 dark:text-blue-50 dark:hover:text-blue-950"
         onPointerDown={(e) => e.stopPropagation()}
       >
         View Details ↗

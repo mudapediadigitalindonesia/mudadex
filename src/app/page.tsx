@@ -1,7 +1,6 @@
 import FloatingPhoneComp from "@/components/FloatingPhone";
 import ScrollLinked from "@/components/ScrollLinked";
-import FadeIn from "@/components/FadeIn";
-import SwipeCards from "@/components/SwipeCard";
+import SwipeWithFade from "@/components/SwipeWithFade";
 import InfinitySlider from "@/components/InfinitySlider";
 import Features from "@/components/Features";
 import Wallets from "@/components/Wallets";
@@ -19,11 +18,11 @@ export default function Home() {
         <Background />
         {/* Header */}
         {/* Hero 1 */}
-        <div className="flex items-start ml-[106px] mt-[131px]">
+        <div className="flex items-start ml-[106px]">
           <Hero />
           {/* Hero2 */}
           <div className="flex justify-end right-10">
-            <div className="flex h-[1003px] w-[586px]">
+            <div className="flex w-[300px]">
               <FloatingPhoneComp />
             </div>
           </div>
@@ -37,17 +36,14 @@ export default function Home() {
           <ScrollLinked />
         </div>
         {/* Exclusive Tokens */}
-        <div className="p-2 text-center mt-[118px]">
+        <div className="p-2 text-center mt-[118x] ">
           <h2 className="text-[40px] font-semibold text-blue-50 dark:text-zinc-950">
             MudaDex Exclusive Tokens
           </h2>
           {/* FadeIn */}
+
           <div className="flex items-start ml-[106px] mt-[131px]">
-            <FadeIn />
-            {/* SwipeCard */}
-            <div className="flex items-center justify-center p-4 w-[700px] h-[200px] ml-auto">
-              <SwipeCards />
-            </div>
+            <SwipeWithFade />
           </div>
         </div>
         {/* InfinitySlider */}

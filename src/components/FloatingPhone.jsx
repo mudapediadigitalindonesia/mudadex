@@ -29,7 +29,7 @@ const FloatingPhoneComp = () => {
 
   return (
     <section
-      className="overflow-x-auto hide-scrollbar px-[90px] pt-[220px] snap-x snap-mandatory"
+      className="overflow-x-auto hide-scrollbar px-[90px] pt-[145px] snap-x snap-mandatory"
       ref={containerRef}
     >
       <div className="flex gap-[65px] w-max">
@@ -59,7 +59,7 @@ const FloatingPhone = () => {
           duration: 2,
           ease: "easeInOut",
         }}
-        className="h-[650px] w-[300px] rounded-[24px] border-2 border-b-2 border-r-2 bg-neutral-900 p-1 pl-[3px] pt-[3px]"
+        className="h-[375px] w-[175px] rounded-[24px] border-2 border-b-2 border-r-2 bg-neutral-900 p-1 pl-[3px]"
       >
         <Screen />
       </motion.div>
@@ -70,7 +70,7 @@ const FloatingPhone = () => {
 const Screen = () => {
   return (
     <div className="h-full w-full overflow-hidden rounded-[20px] bg-white">
-      <div className="h-[630px] w-full relative">
+      <div className="h-full w-full relative">
         <Image
           src="/images/gambar1.png"
           alt="gambar1"
