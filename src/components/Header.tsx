@@ -15,7 +15,7 @@ export default function Home() {
       <nav className="flex space-x-6 text-blue-50 dark:text-zinc-950 font-medium relative">
         {/* BuyCrypto */}
         <div className="group relative">
-          <a href="#" className="hover:text-white">
+          <a href="#" className="hover:text-blue-900">
             BuyCrypto
           </a>
           <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[160px] z-50 transition-all duration-200">
@@ -36,7 +36,7 @@ export default function Home() {
 
         {/* Trade */}
         <div className="group relative">
-          <a href="#" className="hover:text-white">
+          <a href="#" className="hover:text-blue-900">
             Trade
           </a>
           <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[160px] z-50 transition-all duration-200">
@@ -68,13 +68,13 @@ export default function Home() {
         </div>
 
         {/* Markets (no dropdown) */}
-        <a href="#" className="hover:text-white">
+        <a href="#" className="hover:text-blue-900">
           Markets
         </a>
 
         {/* Earn */}
         <div className="group relative">
-          <a href="#" className="hover:text-white">
+          <a href="#" className="hover:text-blue-900">
             Earn
           </a>
           <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[160px] z-50 transition-all duration-200">
@@ -107,7 +107,7 @@ export default function Home() {
 
         {/* About */}
         <div className="group relative">
-          <a href="#" className="hover:text-white">
+          <a href="#" className="hover:text-blue-900">
             About
           </a>
           <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[160px] z-50 transition-all duration-200">
@@ -141,7 +141,7 @@ export default function Home() {
 
       <div className="auth-buttons flex items-center space-x-4 mr-24">
         <ThemeToggle />
-        <button className="login px-4 py-2 rounded-md font-semibold text-blue-950 dark:text-black bg-transparent dark:bg-[#6c5ce7] hover:bg-white hover:text-[#0a0b2c] border border-blue-950 transition dark:border-black">
+        <button className="login px-4 py-2 rounded-md font-semibold text-blue-950 dark:text-blue-50 bg-transparent dark:bg-[#6c5ce7] hover:bg-white hover:text-[#0a0b2c] border border-blue-950 transition dark:border-black">
           Login
         </button>
         <button className="signup px-4 py-2 rounded-md font-semibold text-blue-950 bg-[#6c5ce7] dark:bg-transparent hover:bg-indigo-600 transition dark:border dark:border-blue-950">

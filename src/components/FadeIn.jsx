@@ -37,9 +37,11 @@ export default function FadeIn({ activeIndex }) {
   return (
     <motion.div
       key={activeIndex}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: false, amount: 0.2 }}
     >
       <div className="mx-auto w-[499px] h-[415px] rounded-md text-justify">
         <div className="font-extrabold text-[50px] text-blue-50 dark:text-zinc-950">
