@@ -35,42 +35,83 @@ export default function Home() {
         </div>
 
         {/* Trade */}
+        <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[200px] z-50 transition-all duration-200">
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            Features
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            Mobile App
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            Market Statistics
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            Our Fees
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            API Documentation
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            Mudadex Leaderboard
+          </a>
+          <a
+            href="#"
+            className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
+          >
+            Competitions
+          </a>
+        </div>
+
+        {/* Markets (dropdown) */}
         <div className="group relative">
           <a href="#" className="hover:text-blue-900">
-            Trade
+            Markets
           </a>
           <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[160px] z-50 transition-all duration-200">
             <a
               href="#"
               className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
             >
-              Convert
+              Market Overview
             </a>
             <a
               href="#"
               className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
             >
-              Spot
+              Market Data
             </a>
             <a
               href="#"
               className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
             >
-              Futures
+              Feed
             </a>
             <a
               href="#"
               className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
             >
-              Options
+              Insight
             </a>
           </div>
         </div>
-
-        {/* Markets (no dropdown) */}
-        <a href="#" className="hover:text-blue-900">
-          Markets
-        </a>
 
         {/* Earn */}
         <div className="group relative">
