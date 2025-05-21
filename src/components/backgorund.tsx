@@ -30,7 +30,7 @@ export default function WavePage() {
     scene = new THREE.Scene();
 
     scene.background = new THREE.Color(
-      theme === "dark" ? "#ffffff" : "#000000"
+      theme === "dark" ? "#000000" : "#ffffff"
     );
 
     camera = new THREE.PerspectiveCamera(30, width / height, 0.1, 100);
@@ -75,8 +75,8 @@ export default function WavePage() {
 
         void main() {
           vec3 baseColor = isDark
-            ? vec3(0.1451, 0.3882, 0.9216)   // blue-800
-            : vec3(0.0902, 0.1451, 0.3294);  // blue-950
+            ? vec3(0.0902, 0.1451, 0.3294)   // blue-950 dark
+            : vec3(0.1451, 0.3882, 0.9216);  // blue-800 light
 
           vec3 lightPos = vec3(-40.0, -60.0, 20.0);
           vec3 lightDir = normalize(lightPos - vPosition);

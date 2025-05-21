@@ -1,6 +1,7 @@
 "use client";
 
 import { Wallet, CheckCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function Wallets() {
   const steps = [
@@ -30,9 +31,11 @@ export default function Wallets() {
             and proven security. Don’t miss this opportunity!
           </p>
           <div>
-            <button className="px-5 py-2 bg-indigo-600 text-white rounded-md text-sm font-semibold hover:bg-indigo-700 transition">
-              Register Now
-            </button>
+            <Link href="SignUp">
+              <button className="px-5 py-2 bg-indigo-600 text-white rounded-md text-sm font-semibold hover:bg-indigo-700 transition">
+                Register Now
+              </button>
+            </Link>
           </div>
         </div>
 

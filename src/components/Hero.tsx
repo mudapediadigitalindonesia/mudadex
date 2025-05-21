@@ -1,5 +1,6 @@
 // src/app/components/HeroSection.tsx
 import WaveBackground from "@/components/backgorund";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -16,9 +17,11 @@ const HeroSection = () => {
           interface and a transparent system, Mudadex is the perfect choice for
           your investment future.
         </p>
-        <button className="mt-6 px-6 py-2 bg-indigo-700 hover:bg-indigo-600 text-white rounded-xl w-fit">
-          Try now
-        </button>
+        <Link href="/SignUp">
+          <button className="mt-6 px-6 py-2 bg-indigo-700 hover:bg-indigo-600 text-white rounded-xl w-fit">
+            Join To Mudadex
+          </button>
+        </Link>
       </div>
     </div>
   );
