@@ -1,4 +1,7 @@
-import { FaTelegram, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+"use client";
+
+import Link from "next/link";
+import { FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -93,25 +96,23 @@ export default function Footer() {
               href="#"
               className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
             >
-              <FaTelegram className="text-xl" />
-            </a>
-            <a
-              href="#"
-              className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
-            >
               <FaTwitter className="text-xl" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/mudapedia_digitalid/"
               className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <FaInstagram className="text-xl" />
             </a>
             <a
-              href="#"
+              href="https://www.tiktok.com/@mudapedia_digitalid"
               className="p-2 rounded-full bg-sky-950 text-blue-50 hover:bg-sky-900"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaYoutube className="text-xl" />
+              <FaTiktok className="text-xl" />
             </a>
           </div>
           <ul className="flex flex-col gap-2 mt-2">

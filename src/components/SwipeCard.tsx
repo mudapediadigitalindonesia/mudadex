@@ -75,11 +75,9 @@ const SwipeCards = ({
   const [startIndex, setStartIndex] = useState(0);
 
   const handleSwipe = (direction: "left" | "right") => {
-    setStartIndex((prev) => {
-      const newIndex = (prev + 1) % cardData.length;
-      setActiveIndex(newIndex);
-      return newIndex;
-    });
+    const newIndex = (startIndex + 1) % cardData.length;
+    setStartIndex(newIndex);
+    setActiveIndex(newIndex);
   };
 
   const first = cardData[startIndex];
@@ -164,7 +162,7 @@ const SwipeCard = ({
         href={card.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-6 block w-full rounded-md border py-2 text-center text-sm font-medium dark:hover:bg-neutral-400 hover:bg-sky-950 hover:text-white transition text-sky-950 dark:text-blue-50 dark:hover:text-blue-950"
+        className="mt-6 block w-full rounded-md border py-2 text-center text-sm font-medium dark:hover:bg-neutral-400 hover:bg-blue-600 hover:text-white transition text-sky-950 dark:text-blue-50 dark:hover:text-blue-950"
         onPointerDown={(e) => e.stopPropagation()}
       >
         View Details ↗

@@ -1,19 +1,37 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaSun, FaMoon, FaToggleOn, FaToggleOff } from "react-icons/fa";
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
+  const isDark = theme === "dark";
+
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      className="rounded-full dark:hover:bg-neutral-400 hover:bg-sky-50 hover:text-white transition text-sky-950 dark:text-blue-50 dark:hover:text-blue-950"
-      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+    <button
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${
+        isDark ? "bg-blue-950" : "bg-blue-600"
+      }`}
     >
-      <FaSun className="absolute h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-zinc-950" />
-      <FaMoon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-blue-50" />
-    </Button>
+      <div
+        className={`absolute top-1 left-1 w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center shadow-md transform transition-transform duration-300 ${
+          isDark ? "translate-x-6" : "translate-x-0"
+        }`}
+      >
+        {isDark ? (
+          <FaMoon className="text-blue-600 text-sm" />
+        ) : (
+          <FaSun className="text-blue-950 text-sm" />
+        )}
+      </div>
+    </button>
   );
 }
