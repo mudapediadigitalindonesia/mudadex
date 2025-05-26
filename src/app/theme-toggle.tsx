@@ -18,7 +18,7 @@ export function ThemeToggle() {
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className={`relative w-14 h-8 rounded-full transition-colors duration-300 ${
-        isDark ? "bg-blue-950" : "bg-blue-600"
+        isDark ? "bg-[#6c5ce7]" : "bg-[#6c5ce7]"
       }`}
     >
       <div
