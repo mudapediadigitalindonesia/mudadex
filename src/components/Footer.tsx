@@ -26,9 +26,6 @@ export default function Footer() {
                 <a href="#">Contact Us</a>
               </li>
               <li>
-                <a href="#">Agent Contact</a>
-              </li>
-              <li>
                 <a href="#">Services</a>
               </li>
             </ul>

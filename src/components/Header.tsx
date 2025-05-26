@@ -152,32 +152,6 @@ export default function Home() {
           <a href="#" className="hover:text-blue-900">
             About
           </a>
-          <div className="absolute left-0 mt-2 hidden group-hover:flex flex-col bg-white text-black dark:bg-zinc-900 dark:text-white rounded shadow-md min-w-[160px] z-50 transition-all duration-200">
-            <a
-              href="#"
-              className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
-            >
-              About Us
-            </a>
-            <a
-              href="#"
-              className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
-            >
-              Contact Us
-            </a>
-            <a
-              href="#"
-              className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
-            >
-              Agent Contact
-            </a>
-            <a
-              href="#"
-              className="px-4 py-2 hover:bg-gray-200 dark:hover:bg-zinc-700"
-            >
-              Services
-            </a>
-          </div>
         </div>
       </nav>
 
